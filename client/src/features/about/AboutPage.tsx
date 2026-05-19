@@ -1,5 +1,6 @@
-import { Button, ButtonGroup, Container, Typography, Alert } from "@mui/material";
+import { Button, ButtonGroup, Container, Typography, Alert, List, ListItem, AlertTitle } from "@mui/material";
 import { useLazyGet400ErrorQuery, useLazyGet401ErrorQuery, useLazyGet404ErrorQuery, useLazyGet500ErrorQuery, useLazyGetValidationErrorQuery } from "./errorApi";
+import { useState } from "react";
 
 export default function AboutPage() {
     const [validationErrors, setValidationErrors] = useState<string[]>([]);
@@ -38,7 +39,7 @@ export default function AboutPage() {
             </ButtonGroup>
             {validationErrors.length > 0 && (
                 <Alert severity="error">
-                    <AllertTitle>Validation errors</AllertTitle>
+                    <AlertTitle>Validation errors</AlertTitle>
                     <List>
                         {validationErrors.map(err => (
                             <ListItem key={err}>{ err}</ListItem>
