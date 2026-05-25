@@ -20,7 +20,7 @@ namespace API.Middleware
 
         private async Task HandleException(HttpContext context, Exception ex) 
         /* metoda prima 2 parametra: 
-         context → predstavlja trenutni HTTP zahtjev i odgovor
+         context → predstavlja trenutni HTTP zahtev i odgovor
          ex → greška koja se desila*/
 
         {
